@@ -46,7 +46,6 @@ $(window).on('load', () => {
                     shuffle: true
                 }).then((result) => {
                     let loss = result.history.loss
-                    console.log(result)
                     setStatus(`Epoch ${epoch} - Loss ${loss}`)
                 });
             }
