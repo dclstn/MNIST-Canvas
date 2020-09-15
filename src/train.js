@@ -10,8 +10,7 @@ const sgdOut = tf.train.sgd(0.5) // Squared gradient decent
 
 model.compile({
     optimizer: sgdOut,
-    loss: 'meanSquaredError',
-    metrics=['accuracy']
+    loss: 'meanSquaredError'
 })
 
 $(window).on('load', () => {
