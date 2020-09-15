@@ -2,14 +2,24 @@
 var multiplier = 10
 
 var clear = function clear() {
+    
     let canvas = document.querySelector('#canvas');
     let ctx = canvas.getContext('2d');
+
     let small_canvas = document.querySelector('#small-canvas');
     let small_ctx = small_canvas.getContext('2d');
+
     ctx.fillStyle = "white";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
+
     small_ctx.fillStyle = "white";
     small_ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.beginPath();
+    ctx.fillStyle = "grey";
+    ctx.lineWidth = 2;
+    ctx.rect(40, 40, 200, 200);
+    ctx.stroke();
 }
 
 $(window).on("load", () => {
